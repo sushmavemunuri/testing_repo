@@ -1,0 +1,20 @@
+#FUNCTIONAL DEPENDENCIES AND PRIMARY KEYS.
+## 1)office
+Office_ID ->{Manager_ID, Manager_Name, Office_Name, location, Address, Office_No}
+Since all fields depend on Office_ID, (Office_ID)+ -> R Hence, Office_Id is primary key.
+##2) EMPLOYEE
+Emp_ID-> {FName, MName, LName, Salary, Office_ID, Gender, Address, Age, Emp_phno}
+Since all fields depend on Emp_ID, (Emp_ID)+ -> R Hence, Emp_Id is primary key.
+##3) CUSTOMER
+Customer_ID -> {FName, LName, Address, Gender, Address ,Age, Phone_num, Email }
+Since all fields depend on Customer_ID, (Customer_ID)+ -> R Hence, Customer_Id is primary key.
+##4) INSURANCE
+Insurance_number -> {Insurance_Type}
+Since all fields depend on Insurance_number, (Insurance_number)+ -> R Hence, Insurance_number is primary key.
+##5)VEHCILE
+ Car_no -> {Insurance_number,Car_Color,Car_Type,Car_Model} ISince all fields depend on Insurance_number,(Insurance_number)+ -> R Hence,Insurance_number is primary key.
+##6) PAYMENT
+{Reserve_ID,Customer_ID} ->Total_Price,Payment_method Since all fields depend on {Reserve_ID,Customer_ID} ({Reserve_ID,Customer_ID})+ -> R Hence,{Reserve_ID,Customer_ID} is primary key.
+##7) RESERVATION
+Reserve_ID -> {Reserve_Date,pickupdate,Return_date,No_of_days, pickup_Location,Car_no,Office_Id,Customer_ID}
+I Since all fields depend on Reserve_ID,(Reserve_ID)+ -> R Hence,Reserve_ID is primary key.
